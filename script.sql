@@ -1,0 +1,16 @@
+CREATE DATABASE evaluacionTres;
+
+CREATE TABLE ALUMNO (
+    alu_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    alu_rut VARCHAR(10) NOT NULL,
+    nombre VARCHAR(50),
+    apellido VARCHAR(50),
+    edad INTEGER,
+    email VARCHAR(50),
+    password VARCHAR(50)
+);
+
+CREATE TABLE CARRERA (
+    carr_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    carr_nombre VARCHAR(50)
+);

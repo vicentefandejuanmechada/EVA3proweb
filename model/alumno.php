@@ -17,5 +17,11 @@
         $result = mysqli_query($con, $sql);
         return $result;
     }
+    function getAlumnos() {
+        $con = connection();
+        $sql = "SELECT * FROM alumno";
+        $result = mysqli_query($con, $sql);
+        return $result;
+    }
 
 ?>

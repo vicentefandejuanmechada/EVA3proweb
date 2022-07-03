@@ -10,5 +10,6 @@
 
     <body>
         <a href="views/alumno.php" class="btn btn-primary ">Alumno</a>
+    </body>
 
     </html>

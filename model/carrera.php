@@ -3,7 +3,7 @@
 
     function insertarCarrera($nombre) {
         $con = connection();
-        $sql = "INSERT INTO carrera (nombre_carrera) VALUES ('$nombre')";
+        $sql = "INSERT INTO carrera (nombre) VALUES ('$nombre')";
         $result = mysqli_query($con, $sql);
         return $result;
     }

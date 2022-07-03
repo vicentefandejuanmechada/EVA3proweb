@@ -1,13 +1,3 @@
-
-
--------------- UNCOMMENT TO CREATE DATABASE -----------------------------------
--------------------------------------------------------------------------------
-
--- CREATE DATABASE IF NOT EXISTS `eva3pedrog_vicentes` DEFAULT CHARACTER SET utf8; 
-
--------------------------------------------------------------------------------
-
-
 -- phpMyAdmin SQL Dump
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
@@ -53,7 +43,6 @@ CREATE TABLE `alumno` (
 --
 
 CREATE TABLE `carrera` (
-  `id` int(9) NOT NULL,
   `id_carrera` int(9) NOT NULL,
   `nombre_carrera` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -73,7 +62,7 @@ ALTER TABLE `alumno`
 -- Indices de la tabla `carrera`
 --
 ALTER TABLE `carrera`
-  ADD PRIMARY KEY (`id`),
+  ADD PRIMARY KEY (`id_carrera`),
   ADD KEY `fk_carrera` (`id_carrera`);
 
 --
@@ -90,7 +79,7 @@ ALTER TABLE `alumno`
 -- AUTO_INCREMENT de la tabla `carrera`
 --
 ALTER TABLE `carrera`
-  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_carrera` int(9) NOT NULL AUTO_INCREMENT;
 
 --
 -- Restricciones para tablas volcadas

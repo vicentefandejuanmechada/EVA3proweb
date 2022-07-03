@@ -1,5 +1,5 @@
 <?php 
-    include '../database/model/alumno.php';
+    include '../model/alumno.php';
     //recibe los datos del formulario
     $rut = $_POST['rut'];
     $nombre = $_POST['nombre'];

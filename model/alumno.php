@@ -29,10 +29,11 @@
         $result = mysqli_query($con, $sql);
         return $result;
     }
-
-    function DeleteAlumno(){
+    
+    function DeleteAlumno($id){
+        $con = connection();
         $sql = "DELETE FROM alumno where id_alumno = '$id' ";
-        $result = mysql_query($con,$sql);
+        $result = mysqli_query($con,$sql);
         return $result;
     }
 

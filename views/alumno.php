@@ -18,6 +18,7 @@
           <h1>Alumno</h1>
           <hr />
           <form action="../controller/alumno.php" method="POST">
+            <input type="hidden" name="op" value="insert" />
             <!-- RUT, NOMBRE, APELLIDO Y CARRERA-->
             <div class="form-group">
               <label for="rut">RUT</label>
@@ -82,12 +83,14 @@
                 echo '<td>' . $alumno['apellido'] . '</td>';
                 echo '<td>' . $alumno['carrera'] . '</td>';
                 echo '<td>
-                <a href="../controller/alumno.php?id_alumno=' . $alumno['id_alumno'] . '" class="btn btn-danger">Eliminar</a>';
+
+                <a href="../controller/alumno.php?op=delete&id=' . $alumno['id_alumno'] . '" class="btn btn-danger">Eliminar</a>';
+
+
                 echo '<a href="./updateAlumno.php?id_alumno=' . $alumno['id_alumno'] . '&rut=' . $alumno['rut'] . '&nombre=' . $alumno['nombre'] . '&apellido=' . $alumno['apellido'] . '&carrera=' . $alumno['carrera'] . '" class="btn btn-warning">Editar</a>';
                 echo '</td>';
                 
                 echo '</tr>';
-                echo '<a href="../controller.php?op=delete&id'?.$alumno['id_alumno']. '"class="btn btn-warning">Update</a>';
               
                 
               }

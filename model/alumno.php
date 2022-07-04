@@ -1,5 +1,5 @@
 <?php 
-    include '../database/connection.php';
+    include_once '../database/connection.php';
 
     //database scheme
     // CREATE TABLE `alumno` (

@@ -85,6 +85,9 @@
                 <a href="../controller/alumno.php?id_alumno=' . $alumno['id_alumno'] . '" class="btn btn-danger">Eliminar</a>
                 </td>';
                 echo '</tr>';
+                echo '<a href="../controller.php?op=delete&id'?.$alumno['id_alumno']. '"class="btn btn-warning">Update</a>';
+              
+                
               }
               ?>
             </tbody>

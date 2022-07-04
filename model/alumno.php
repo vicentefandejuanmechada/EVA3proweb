@@ -24,4 +24,10 @@
         return $result;
     }
 
+    function DeleteAlumno(){
+        $sql = "DELETE FROM alumno where id_alumno = '$id' ";
+        $result = mysql_query($con,$sql);
+        return $result;
+    }
+
 ?>

@@ -1,6 +1,5 @@
 <?php
 
-include '../model/carrera.php';
 $id = $_GET['id'];
 $nombre = $_GET['nombre'];
 

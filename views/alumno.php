@@ -62,6 +62,7 @@
           <table class="table table-striped">
             <thead>
               <tr>
+                <th>ID</th>
                 <th>RUT</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
@@ -75,14 +76,14 @@
               $alumnos = getAlumnos();
               while ($alumno = mysqli_fetch_array($alumnos)) {
                 echo '<tr>';
-                echo '<td>' . $alumno['rut_alumno'] . '</td>';
-                echo '<td>' . $alumno['nombre_alumno'] . '</td>';
-                echo '<td>' . $alumno['apellido_alumno'] . '</td>';
-                echo '<td>' . $alumno['nombre_carrera'] . '</td>';
-                echo '<td>';
-                echo '<a href="/controller/alumno.php?id=' . $alumno['id_alumno'] . '" class="btn btn-primary">Editar</a>';
-                echo '<a href="/controller/alumno.php?id=' . $alumno['id_alumno'] . '&accion=eliminar" class="btn btn-danger">Eliminar</a>';
-                echo '</td>';
+                echo '<td>' . $alumno['id_alumno'] . '</td>';
+                echo '<td>' . $alumno['rut'] . '</td>';
+                echo '<td>' . $alumno['nombre'] . '</td>';
+                echo '<td>' . $alumno['apellido'] . '</td>';
+                echo '<td>' . $alumno['carrera'] . '</td>';
+                echo '<td>
+                <a href="../controller/alumno.php?id_alumno=' . $alumno['id_alumno'] . '" class="btn btn-danger">Eliminar</a>
+                </td>';
                 echo '</tr>';
               }
               ?>

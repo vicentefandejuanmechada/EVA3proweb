@@ -1,5 +1,5 @@
 <?php 
-    include '../database/connection.php';
+    include_once '../database/connection.php';
 
     //database scheme
     // CREATE TABLE `alumno` (
@@ -19,7 +19,7 @@
     }
     function getAlumnos() {
         $con = connection();
-        $sql = "SELECT * FROM alumno";
+        $sql = "SELECT id_alumno, rut, nombre, apellido, ca.nombre_carrera carrera FROM alumno inner join carrera ca on alumno.carrera = ca.id_carrera";
         $result = mysqli_query($con, $sql);
         return $result;
     }

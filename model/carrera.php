@@ -1,5 +1,5 @@
 <?php
-    include '../database/connection.php';
+    include_once '../database/connection.php';
 
     function insertarCarrera($nombre) {
         $con = connection();

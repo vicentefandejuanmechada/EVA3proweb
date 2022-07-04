@@ -1,7 +1,7 @@
 <?php
 include_once '../model/carrera.php';
 if (!isset($_GET['id'])) {
-    header('Location: ../controller/alumno.php');
+    header('Location: ./alumno.php');
 } else {
     $id = $_GET['id'];
     $rut = $_GET['rut'];

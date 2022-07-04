@@ -82,12 +82,12 @@
                 echo '<td>' . $alumno['nombre'] . '</td>';
                 echo '<td>' . $alumno['apellido'] . '</td>';
                 echo '<td>' . $alumno['carrera'] . '</td>';
-                echo '<td>
+                echo '<td>';
 
-                <a href="../controller/alumno.php?op=delete&id=' . $alumno['id_alumno'] . '" class="btn btn-danger">Eliminar</a>';
+                echo '<a href="../controller/alumno.php?op=delete&id=' . $alumno['id_alumno'] . '" class="btn btn-danger">Eliminar</a>';
 
 
-                echo '<a href="./updateAlumno.php?id_alumno=' . $alumno['id_alumno'] . '&rut=' . $alumno['rut'] . '&nombre=' . $alumno['nombre'] . '&apellido=' . $alumno['apellido'] . '&carrera=' . $alumno['carrera'] . '" class="btn btn-warning">Editar</a>';
+                echo '<a href="./updateAlumno.php?id=' . $alumno['id_alumno'] . '&rut=' . $alumno['rut'] . '&nombre=' . $alumno['nombre'] . '&apellido=' . $alumno['apellido'] . '&carrera=' . $alumno['carrera'] . '" class="btn btn-warning">Editar</a>';
                 echo '</td>';
                 
                 echo '</tr>';

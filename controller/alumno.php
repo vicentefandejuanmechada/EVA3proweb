@@ -14,6 +14,16 @@ if (isset($_POST['op'])) {
         header('Location: ../views/alumno.php');
         exit();
     } else if ($op == 'update') {
+        $id = $_POST['id'];
+        $rut = $_POST['rut'];
+        $nombre = $_POST['nombre'];
+        $apellido = $_POST['apellido'];
+        $carrera = $_POST['carrera'];
+
+        //actualiza los datos en la base de datos
+        $result = updateAlumno($id, $rut, $nombre, $apellido, $carrera);
+        header('Location: ../views/alumno.php');
+        exit();
     }
 }
 

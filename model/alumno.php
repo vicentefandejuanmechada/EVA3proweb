@@ -23,5 +23,11 @@
         $result = mysqli_query($con, $sql);
         return $result;
     }
+    function updateAlumno($id, $rut, $nombre, $apellido, $carrera) {
+        $con = connection();
+        $sql = "UPDATE alumno SET rut = '$rut', nombre = '$nombre', apellido = '$apellido', carrera = '$carrera' WHERE id_alumno = '$id'";
+        $result = mysqli_query($con, $sql);
+        return $result;
+    }
 
 ?>

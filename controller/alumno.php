@@ -9,5 +9,15 @@
     //inserta los datos en la base de datos
     $result = insertarAlumno($rut, $nombre, $apellido, $carrera);
 
+    if (isset($_GET['op'])) {
+        $op = $_GET['op'];
+        if ($op == 'delete') {
+            $id = $_GET['id'];
+            $result = DeleteAlumno($id);
+            header('Location: ../views/alumno.php');
+            exit();
+        }
+    }
+
     die($result);
 ?>

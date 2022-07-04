@@ -19,6 +19,7 @@
                     <h1>Insertar Carrera</h1>
                     <hr />
                     <form action="../controller/carrera.php" method="POST">
+                        <input type="hidden" name="op" value="insert" />
                         <!-- RUT, NOMBRE, APELLIDO Y CARRERA-->
                         <div class="form-group">
                             <label for="nombre">Nombre</label>
@@ -56,7 +57,12 @@
                                 echo '<td>' . $carrera['id_carrera'] . '</td>';
                                 echo '<td>' . $carrera['nombre_carrera'] . '</td>';
                                 echo '<td>';
-                                echo '<a href="../controller/carrera.php?id=' . $carrera['id_carrera'] . '" class="btn btn-danger">Eliminar</a>';
+
+
+                                // send post data to controller
+                                echo '<a href="../controller/carrera.php?op=delete&id=' . $carrera['id_carrera'] . '" class="btn btn-danger">Delete</a>';
+
+                                echo '<a href="./updateCarrera.php?id='. $carrera['id_carrera'].'&nombre='. $carrera["nombre_carrera"] .'" class="btn btn-warning">Update</a>';
                                 echo '</td>';
                                 echo '</tr>';
                             }
@@ -69,3 +75,7 @@
     </section>
 
 </body>
+<script src="/assets/js/jquery-3.6.0.min.js"></script>
+<script src="/assets/js/requestHandler.js"></script>
+
+</html>

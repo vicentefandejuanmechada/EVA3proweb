@@ -13,4 +13,16 @@
         $result = mysqli_query($con, $sql);
         return $result;
     }
+    function deleteCarrera($id) {
+        $con = connection();
+        $sql = "DELETE FROM carrera WHERE id_carrera = $id";
+        $result = mysqli_query($con, $sql);
+        return $result;
+    }
+    function updateCarrera($id, $nombre) {
+        $con = connection();
+        $sql = "UPDATE carrera SET nombre_carrera = '$nombre' WHERE id_carrera = $id";
+        $result = mysqli_query($con, $sql);
+        return $result;
+    }
 ?>

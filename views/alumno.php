@@ -15,7 +15,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1>Alumno</h1>
+          <h1>Formulario Crear Alumno</h1>
           <hr />
           <form action="../controller/alumno.php" method="POST">
             <input type="hidden" name="op" value="insert" />

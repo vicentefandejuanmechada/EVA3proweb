@@ -16,7 +16,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1>Insertar Carrera</h1>
+                    <h1>Formulario Crear Carrera</h1>
                     <hr />
                     <form action="../controller/carrera.php" method="POST">
                         <input type="hidden" name="op" value="insert" />
